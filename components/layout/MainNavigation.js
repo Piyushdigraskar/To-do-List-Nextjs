@@ -1,4 +1,5 @@
 import classes from './MainNavigation.module.css';
+import Link from 'next/link';
 
 function MainNavigation() {
 
@@ -8,10 +9,10 @@ function MainNavigation() {
       <nav>
         <ul>
           <li>
-            <Link to='/'>Todo List</Link>
+            <Link href='/'>Todo List</Link>
           </li>
           <li>
-            <Link to='/completed'>completed</Link>
+            <Link href='/completed'>completed</Link>
           </li>
         </ul>
       </nav>

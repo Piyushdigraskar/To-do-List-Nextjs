@@ -16,7 +16,7 @@ function TodoForm(props) {
       
     };
 
-    props.onAddMeetup(todoData);
+    props.onAddtodo(todoData);
   }
 
   return (

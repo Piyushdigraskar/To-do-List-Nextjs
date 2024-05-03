@@ -2,14 +2,20 @@ import Card from '../ui/Card';
 import classes from './TodoItem.module.css';
 
 function TodoItem(props) {
+  function deleteHandler() {
+
+  }
+
+  function completedHandler() {
+
+  }
   return (
     <li className={classes.item}>
       <Card>
         <div className={classes.content}>
-         <h3>{props.todos}</h3>
-        </div>
-        <div className={classes.actions}>
-          <button>delete</button>
+        <button className={classes.checkboxButton} onClick={completedHandler} ></button>
+          <h3>{props.todos}</h3>
+          <button className={classes.actions} onClick={deleteHandler}>delete</button>
         </div>
       </Card>
     </li>

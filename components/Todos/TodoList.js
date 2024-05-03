@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import TodoItem from './TodoItem';
 import classes from './TodoList.module.css';
-import TodoForm from './TodoForm';
+
 
 function TodoList(props) {
   return (
@@ -15,7 +15,6 @@ function TodoList(props) {
           />
         ))}
       </ul>
-      <TodoForm />
     </Fragment>
   );
 }
