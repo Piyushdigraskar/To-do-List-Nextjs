@@ -13,6 +13,7 @@ function TodoForm(props) {
 
     const todoData = {
       todos: enteredTodos,
+      status: false
       
     };
 

@@ -12,6 +12,7 @@ function TodoList(props) {
             key={todo.id}
             id={todo.id}
             todos={todo.todos}
+            status={todo.status}
           />
         ))}
       </ul>

@@ -34,13 +34,14 @@ export async function getStaticProps() {
 
     const todoCollections = db.collection('todos');
 
-    const todos = await todoCollections.find().toArray();
+    const todos = await todoCollections.find({status: false}).toArray();
     client.close();
 
     return {
         props: {
             todos: todos.map(todo =>({
                 todos: todo.todos,
+                status:todo.status,
                 id: todo._id.toString()
             }))
         },
