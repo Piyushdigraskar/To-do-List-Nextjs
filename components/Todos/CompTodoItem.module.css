@@ -1,0 +1,21 @@
+.item {
+    margin: 1rem 0;
+  }
+  
+  
+  .content {
+    text-align: center;
+    display: flex; /* Add this */
+    justify-content: space-between; /* Add this */
+    align-items: center; /* Add this */
+    padding: 1rem;
+  }
+  
+  
+  .content h3 {
+    font-size: 1.25rem;
+    color: #2c292b;
+    margin-right: 10%;
+  }
+  
+  

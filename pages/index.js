@@ -20,9 +20,36 @@ const Homepage = (props) => {
         router.push('/');
     }
 
+    async function CompletedHandler(id){
+        console.log(id);
+        const response = await fetch(`/api/completed/${id}`, {
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({ status: true })
+        })
+        const data = await response.json();
+        console.log(data);
+        
+    }
+    async function DeletedHandler(id){
+        console.log(id);
+        const response = await fetch(`/api/deleted/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'content-type': 'application/json'
+            }
+        })
+        const data = await response.json();
+        console.log(data);
+        
+    }
+
+ 
     return (
         <Fragment>
-            <TodoList todos={props.todos} />
+            <TodoList todos={props.todos} onCompTodo={CompletedHandler} onDeleted={DeletedHandler}/>
             <TodoForm onAddtodo={addTodoHandler}></TodoForm>
         </Fragment>
     );
